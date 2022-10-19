@@ -1,0 +1,928 @@
+/*
+
+* PostCSS:1.0.0
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.pad {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+.header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    padding: 0;
+}
+
+.header.sticky a {
+    color: #333 !important;
+}
+
+
+/* ========== section title css ================== */
+
+.section_title {
+    text-align: center;
+}
+
+.section_title h2 {
+    font-size: 48px;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.section_title h2::before {
+    position: absolute;
+    content: '';
+    background-color: #ff3636;
+    width: 100px;
+    height: 2px;
+    bottom: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.section_title h2::after {
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-color: #ff3636;
+    border-radius: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -4px;
+}
+
+
+/* ======= header area ====== */
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header a {
+    color: #fff !important;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.header .navbar-brand {
+    border: 1px solid #fff;
+    padding: 5px 20px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: tomato !important;
+}
+
+
+/* ============= banner css start here ================== */
+
+.banner_area {
+    height: 100vh;
+    position: relative;
+    z-index: 5;
+}
+
+.banner_area img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.banner_area::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    opacity: .75;
+    z-index: -1;
+}
+
+.banner_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.banner_content h1 {
+    font-size: 68px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.banner_content p {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.banner_content a {
+    text-decoration: none;
+    margin-top: 15px;
+    color: #fff;
+}
+
+
+/*  ===========Button css ============= */
+
+.box_btn {
+    background: #ff3636;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    border-radius: 6px;
+    text-transform: capitalize;
+}
+
+.box_btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.box_btn #banner_btn {
+    position: absolute;
+    top: 14px;
+    left: 3px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.box_btn:hover #banner_btn {
+    left: 11px;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* ============= banner css end here ================== */
+
+
+/* ============= about css start here ================== */
+
+.about_content h4 {
+    font-size: 48px;
+    color: #ff3636;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.about_content h5 {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.about_content ul {
+    margin-top: 15px;
+    list-style: none;
+}
+
+.about_content ul li {
+    margin-bottom: 5px;
+}
+
+.about_area .icon {
+    color: #ff3636 !important;
+}
+
+.about_area a {
+    margin-top: 30px;
+}
+
+
+/* ============= about css end here ================== */
+
+
+/* ============= services css start here ================== */
+
+.services_area {
+    background-color: #f6f6f6;
+}
+
+.single_services {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid#f2f2f2;
+    margin-top: 20px;
+    position: relative;
+}
+
+.single_services span {
+    position: absolute;
+    font-size: 40px;
+    left: 10px;
+    color: #f2f2;
+    top: 20px;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+
+.single_services i {
+    background-color: #ff3636;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.single_services i:hover {
+    border-radius: 50%;
+}
+
+.single_services h4 {
+    margin: 15px 0;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+
+/* ============= services css end here ================== */
+
+
+/* ============= project area css start here ================== */
+
+.single_project {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.project_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+.project_hover::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.project_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.single_project:hover .project_hover {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    visibility: visible;
+}
+
+.project_content i,
+.project_content h4 {
+    color: #fff;
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.project_content h4 span {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.project_content i {
+    border: 1px solid #fff;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+
+/* ============= project area css end here ================== */
+
+
+/* ============= counter area css end here ================== */
+
+.counter_area {
+    background: #333;
+}
+
+.counter_area .section_title {
+    color: #fff;
+}
+
+.single_counter {
+    color: #fff;
+    text-align: center;
+}
+
+.single_counter i {
+    background: #ff3636;
+    font-size: 25px;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 5px;
+}
+
+.single_counter h4 {
+    font-size: 30px;
+    margin: 10px 0px;
+    font-weight: 600;
+}
+
+.single_counter p {
+    text-transform: capitalize;
+}
+
+
+/* ============= counter area css end here ================== */
+
+
+/* ============= timeline area css start here ================== */
+
+.timeline {
+    position: relative;
+    list-style-type: none;
+}
+
+.timeline::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: #ff3636;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+.timeline li {
+    display: table;
+    clear: both;
+    position: relative;
+}
+
+.timeline li:nth-child(even) .timeline_box {
+    float: right;
+    text-align: left;
+}
+
+.timeline_box {
+    border: 2px solid #ff3636;
+    width: 47%;
+    padding: 20px;
+    text-align: right;
+}
+
+.timeline li::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #ff3636;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.timeline_box h4 {
+    text-transform: capitalize;
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.timeline_box span {
+    font-size: 20px;
+    color: #ff3636;
+}
+
+
+/* ============= timeline area css end here ================== */
+
+
+/* ============= testimonial area css end here ================== */
+
+.testimonial_area {
+    background: #333;
+}
+
+.testimonial_area .section_title {
+    color: #fff;
+}
+
+.single_testimonials {
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.single_testimonials img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 1px dotted #ddd;
+    padding: 3px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.single_testimonials p {
+    margin-bottom: 20px;
+}
+
+.single_testimonials h4 {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.single_testimonials h4 span {
+    display: block;
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+.testimonial_area .slick-dots {
+    margin-top: 33px;
+    list-style: none;
+    text-align: center;
+}
+
+.testimonial_area .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.testimonial_area .slick-dots li button {
+    background: #ff3636;
+    border: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    text-indent: -99999999px;
+}
+
+.testimonial_area .slick-dots li.slick-active button {
+    background: tomato;
+}
+
+
+/* ============= testimonial area end here ================== */
+
+
+/* ============= price table area start here ================== */
+
+.price_area {
+    background: #ddd;
+}
+
+.single_price {
+    text-align: center;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+}
+
+.single_price::after,
+.single_price::before {
+    position: absolute;
+    content: '';
+    background: #ff3636;
+    width: 2px;
+    height: 0;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+.single_price::before {
+    top: 0;
+    left: 0;
+}
+
+.single_price::after {
+    bottom: 0;
+    right: 0;
+}
+
+.single_price:hover::before,
+.single_price:hover::after {
+    height: 100%;
+}
+
+.single_price h5 {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.single_price h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.single_price ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.single_price ul li {
+    text-align: center;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    border-bottom: 1px dotted #ddd;
+    text-transform: capitalize;
+}
+
+.single_price ul li:last-child {
+    border-bottom: none;
+}
+
+
+/* ============= price table area end here ================== */
+
+
+/* ============== team area start here =============  */
+
+.single_team {
+    position: relative;
+    overflow: hidden;
+}
+
+.person_social {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #333;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-top: -64px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.single_team:hover .person_social {
+    margin-top: 0;
+}
+
+.person_social a {
+    display: inline-block;
+    color: #fff;
+    margin: 0px 15px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.person_social a:hover {
+    color: #ff3636;
+}
+
+.person_content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #333;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: -106px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.single_team:hover .person_content {
+    margin-bottom: 0;
+}
+
+.person_content h4 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.person_content h4 span {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/* ============== team area end here =============  */
+
+
+/* ============== blog area start here =============  */
+
+.blog_area {
+    background: #ddd;
+}
+
+.single_blog {
+    border: 1px solid #f2f2f2;
+    background: #fff;
+}
+
+.blog_content {
+    padding: 10px;
+}
+
+.blog_content h5 {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+
+.blog_content ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.blog_content ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 5px;
+}
+
+.blog_content ul li a:hover {
+    color: #ff3636;
+}
+
+.blog_content a {
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.single_blog:hover img {
+    -webkit-transform: rotate(3deg) scale(1.1);
+    -ms-transform: rotate(3deg) scale(1.1);
+    transform: rotate(3deg) scale(1.1);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.single_blog .blog_img {
+    overflow: hidden;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+
+/* ============== blog area end here =============  */
+
+
+/* ============== cta area start here =============  */
+
+.cta_area {
+    background: url(../img/hire-me.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+}
+
+.cta_area::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    opacity: .75;
+    z-index: -2;
+}
+
+.cta_area h4 {
+    font-weight: 700;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.cta_area p {
+    margin-bottom: 20px;
+}
+
+.contact_address ul {
+    list-style-type: none;
+}
+
+.contact_address ul li {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.contact_address .contact_icon {
+    position: relative;
+    margin: 5px 20px;
+    color: #ddd;
+}
+
+.contact_icon::before {
+    position: absolute;
+    content: '';
+    width: 28px;
+    height: 28px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #ff3636;
+    z-index: -5;
+    left: -6px;
+    top: -2px;
+}
+
+.contact_address h4 {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.contact_address span {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
+/* ============== cta area end here =============  */
+
+
+/* ============== footer area start here =============  */
+
+.footer_area {
+    background: #333;
+    color: #fff;
+}
+
+.footer_area h4 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer_area a {
+    color: #fff;
+    margin: 15px 20px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    font-size: 15px;
+}
+
+.footer_area a:hover {
+    color: #ff3636;
+}
+
+.footer_area p {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+@media (max-width: 576px) {
+    .banner_area {
+        height: 500px;
+    }
+    .banner_area h1 {
+        font-size: 40px !important;
+    }
+    .timeline_box h4 {
+        font-size: 18px;
+    }
+    .section_title h2 {
+        font-size: 35px;
+    }
+    .single_price,
+    .single_team,
+    .single_blog {
+        margin-bottom: 20px;
+    }
+    .section_title:last-child {
+        margin-bottom: 0;
+    }
+}
